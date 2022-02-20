@@ -32,20 +32,26 @@ export class Provider {
         const speed = columns.findIndex(d => d.name === 'speed');
 
         const items: Item[] = [];
-        data.forEach(item => {
-            items.push({
-                Name: item[trait],
+        const modifiers: Item[] = [];
+        data.forEach(itemData => {
+            const item = {
+                Name: itemData[trait],
                 Stats: {
-                    Strength: item[strength],
-                    Dexterity: item[stealth],
-                    Charm: item[charm],
-                    Speed: item[speed]
+                    Strength: itemData[strength],
+                    Dexterity: itemData[stealth],
+                    Charm: itemData[charm],
+                    Speed: itemData[speed]
                 },
-                Id: item[id]
-            })
+                Id: itemData[id]
+            };
+
+            item.Name.includes('of ') ? modifiers.push(item) : items.push(item);
         });
 
-        return items;
+        console.log(items);
+        console.log(modifiers);
+
+        return {items: items, modifiers: modifiers};
     }  
 
     public async getTodos() {
