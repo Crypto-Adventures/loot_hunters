@@ -1,0 +1,17 @@
+@import './style/Variables.scss';
+
+.App {
+    background-color: $color1;
+    background: linear-gradient(0deg, $color5 0%, $color3 40%, $color1 100%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .Title {
+        margin: 2%;
+        font-size: 60px;
+        font-weight: 800;
+        color: darken($color1, 20%);
+        // text-shadow: 3px 1px $color3;
+    }
+}
