@@ -4,6 +4,7 @@ import { Item } from '../../models/Item';
 import { OldStats } from '../../models/Stats';
 import './CharacterSheet.scss';
 import { ItemButton } from './Item/ItemButton';
+import chortle from '../../static/chortle.jpg';
 
 interface CharacterSheetProps {
     Character: Character
@@ -74,11 +75,10 @@ export const CharacterSheet = (props: CharacterSheetProps) => {
         }
     }, [statsCalculated]);
 
-
     return (
         <div className="CharacterSheetWrapper">
             <div className="CharacterSheet">
-                <div className="Picture"></div>
+                <img className="Picture" src={chortle}/>
                 <div className="Stats">
                     <h1 className="CharacterName">{props.Character.Name}</h1>
                     <h2 className="StatsTitle">Stats</h2>

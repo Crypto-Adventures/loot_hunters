@@ -22,7 +22,7 @@ function App() {
         "Stats": {
             "Strength": 5,
             "Dexterity": 4,
-            "Charm": 99999,
+            "Charm": 19,
             "Speed": 6
         },
         "Id": 0
