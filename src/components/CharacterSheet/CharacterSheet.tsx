@@ -18,9 +18,9 @@ export const CharacterSheet = (props: CharacterSheetProps) => {
 
     const getItems = () => {
         const items: JSX.Element[] = [];
-        props.Character.Equipped.forEach(d => {
+        equipped.forEach(d => {
             items.push(
-                <ItemButton item={d} />
+                <ItemButton item={d} click={unequipItem}/>
             );
         });
         return items;
@@ -28,7 +28,7 @@ export const CharacterSheet = (props: CharacterSheetProps) => {
 
     const getInventory = () => {
         const items: JSX.Element[] = [];
-        props.Character.Inventory.forEach(d => {
+        inventory.forEach(d => {
             items.push(
                 <ItemButton item={d} click={equipItem}/>
             );
@@ -40,6 +40,12 @@ export const CharacterSheet = (props: CharacterSheetProps) => {
         setEquippedItems(equipped.concat(item));
         setInventory(inventory.filter(d => d.Id != item.Id));
         getStats(equipped.concat(item));
+    }
+
+    const unequipItem = (item: Item) => {
+        setEquippedItems(equipped.filter(d => d.Id != item.Id));
+        setInventory(inventory.concat(item));
+        getStats(equipped.filter(d => d.Id != item.Id));
     }
 
     const getStats = (equippedItems: Item[]) => {
