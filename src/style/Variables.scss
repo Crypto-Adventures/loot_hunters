@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Mate:ital@0;1&display=swap');
+
+$color1: #985F99;
+$color2: #9684A1; 
+$color3: #AAACB0;
+$color4: #B6C9BB;
+$color5: #BFEDC1;
+
+$titleFont: 'Josefin Sans', sans-serif;
+$textFont: 'Mate', serif;
+
+html, body {
+    font-family: $textFont;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $titleFont;
+}
