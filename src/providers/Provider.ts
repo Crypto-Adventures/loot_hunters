@@ -5,11 +5,7 @@ import { Item } from "../models/Item";
 export class Provider {
     private connection: Connection;
 
-    constructor() {
-        this.getConnection();
-    }
-
-    private async getConnection () {
+    public async connect () {
         const payload = {
             network: "testnet",
             host: "https://testnet.tableland.network"
