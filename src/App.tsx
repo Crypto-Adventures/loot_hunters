@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Provider } from './providers/Provider';
-
 
 function App() {
   let connected: boolean = false;
@@ -15,11 +13,9 @@ function App() {
     }
   }, [connected]);
 
-
   return (
     <div className="App">
       <button onClick={() => {provider.getItems()}}>Get Loot</button>
-      <button onClick={() => {provider.getTodos()}}>Get Todos</button>
     </div>
   );
 }
