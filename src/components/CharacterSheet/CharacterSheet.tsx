@@ -2,6 +2,7 @@ import React from 'react';
 import { Character } from '../../models/Character';
 import { Item } from '../../models/Item';
 import './CharacterSheet.scss';
+import { ItemButton } from './Item/ItemButton';
 
 interface CharacterSheetProps {
     Character: Character
@@ -9,13 +10,16 @@ interface CharacterSheetProps {
 
 export const CharacterSheet = (props: CharacterSheetProps) => {
 
-    const Items = (list: Item[]) => {
+    const getItems = (list: Item[]) => {
         const items: JSX.Element[] = [];
         list.forEach(d => {
             items.push(
-                <div className="Item">
-                    {d.Name}
-                </div>
+                
+                <ItemButton item={d}/>
+                // <div className="Item">
+                    
+                //     {d.Name}
+                // </div>
             );
         });
         return items;
@@ -36,14 +40,14 @@ export const CharacterSheet = (props: CharacterSheetProps) => {
                     <div className="Items">
                         <h2>Equipped Items</h2>
                         <div className="EquippedItems">
-                            {Items(props.Character.Equipped)}
+                            {getItems(props.Character.Equipped)}
                         </div>
                     </div>
                     
                     <div className="Inventory">
                         <h2>Inventory</h2>
                         <div className="InventoryItems">
-                            {Items(props.Character.Inventory)}
+                            {getItems(props.Character.Inventory)}
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,14 @@
+@import '../../../style/Variables.scss';
+
+.ItemButton {
+    background-color: $color2;
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: $titleFont;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 0 2px 2px rgba(black, 0.15);
+    text-transform: uppercase;
+}

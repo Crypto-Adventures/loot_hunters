@@ -18,14 +18,34 @@ function App() {
 
   const equipped: Item[] = [
     {
-        "Name": "Barbarian Helmet",
+        "Name": "Banana Hammock of Destiny",
         "Stats": {
-            "Strength": 2,
-            "Dexterity": 3,
-            "Charm": -1,
-            "Speed": 1
+            "Strength": 5,
+            "Dexterity": 4,
+            "Charm": 99999,
+            "Speed": 6
         },
         "Id": 0
+    },
+    {
+      "Name": "Matte Bows",
+      "Stats": {
+          "Strength": 0,
+          "Dexterity": 3,
+          "Charm": -2,
+          "Speed": 1
+      },
+      "Id": 1
+    },
+    {
+      "Name": "Slippery Flippers",
+      "Stats": {
+          "Strength": 0,
+          "Dexterity": 4,
+          "Charm": -1,
+          "Speed": 6
+      },
+      "Id": 1
     }
   ]
 
@@ -173,7 +193,7 @@ function App() {
   ]
 
   const temp_character: Character = {
-    Name: 'Zac Efron in a Basketball Jersey',
+    Name: 'Chortle - Alpaca Barbarian',
     Stats: {
       Strength: 3,
       Dexterity: 8,
