@@ -1,11 +1,7 @@
-import { Stats } from "./Stats";
+import { OldStats, Stats } from "./Stats";
 
 export interface Item {
     Name: string,
-    Type: ItemType,
-    Stats: Stats
-}
-
-export enum ItemType {
-    // TODO: fill this out
+    Stats: OldStats,
+    Id: number
 }

@@ -6,3 +6,10 @@ export interface Stats {
     Charisma: number,
     Constitution: number
 }
+
+export interface OldStats { 
+    Strength: number,
+    Dexterity: number,
+    Charm: number,
+    Speed: number
+}
